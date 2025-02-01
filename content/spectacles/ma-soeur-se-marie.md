@@ -1,8 +1,10 @@
 ---
-layout: layouts/base.njk
+layout: layouts/spectacle.njk
+title: Ma soeur se marie
 eleventyNavigation:
-  parent: Nos spectacles
-  key: Ma soeur se marie !
+  parent: Nos Spectacles
+  key: ma-soeur-se-marie
+draft: false
 ---
 # Ma soeur se marie
 
