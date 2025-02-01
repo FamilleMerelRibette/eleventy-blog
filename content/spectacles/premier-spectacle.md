@@ -6,6 +6,9 @@ location: Théâtre Municipal
 description: Une interprétation moderne du ballet classique de Tchaïkovsky
 image: /img/spectacles/lac-des-cygnes.jpg
 tickets_url: https://billetterie.example.com/lac-des-cygnes
+eleventyNavigation:
+  parent: Nos spectacles
+  key: premier spectacle
 ---
 
 Un spectacle magique qui revisite le célèbre ballet du Lac des Cygnes dans une mise en scène contemporaine. Les danseurs vous transporteront dans un univers où la grâce et la technique se mêlent à une scénographie innovante.
