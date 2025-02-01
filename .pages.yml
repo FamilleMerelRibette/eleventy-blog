@@ -20,6 +20,7 @@ content:
     view:
       fields: [title, draft, date]
     fields:
+      - { name: layout, type: string, hidden: true, default: layouts/spectacle.njk }
       - { name: title, label: Titre, type: string, required: true }
       - { name: description, label: Description, type: string }
       - name: eleventyNavigation
