@@ -13,10 +13,10 @@ content:
       - { name: draft, label: Draft, type: boolean }
       - { name: tags, label: Tags, type: string, list: true }
       - { name: body, label: Body, type: rich-text }
-  - name: about
-    label: About page
+  - name: a-propos
+    label: A Propos
     type: file
-    path: content/about/index.md
+    path: content/a-propos/index.md
     fields:
       - { name: layout, type: string, hidden: true, default: layouts/base.njk }
       - name: eleventyNavigation
