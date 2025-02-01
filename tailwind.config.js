@@ -5,7 +5,11 @@ module.exports = {
     "./content/**/*.{html,njk,md}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'comic': ['"Comic Sans MS"', 'cursive'],
+      },
+    },
   },
   plugins: [],
 }
