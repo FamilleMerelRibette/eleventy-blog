@@ -50,6 +50,9 @@
 			</nav>
 		</header>
 
+		{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+
+
 		<main id="skip">
 			{{ content | safe }}
 		</main>
