@@ -1,10 +1,10 @@
 ---
-layout: layouts/spectacle.njk
-title: Ma soeur se marie
+layout: layouts/spectacles.njk
+title: Tous les spectacles
 description: de la chanson et du fun
 eleventyNavigation:
   key: Nos spectacles
-  order: 2
+  order: 0
 draft: false
 ---
 # Mes Spectacles
