@@ -1,0 +1,39 @@
+---
+layout: layouts/base.njk
+---
+<article class="spectacle">
+  <header class="mb-8">
+    <h1 class="text-4xl font-bold mb-4">{{ title }}</h1>
+    {% if date %}
+      <time datetime="{{ date | htmlDateString }}" class="block text-gray-600 dark:text-gray-400">
+        {{ date | readableDate }}
+      </time>
+    {% endif %}
+    {% if location %}
+      <div class="location mt-2 text-gray-700 dark:text-gray-300">
+        <span class="font-semibold">Lieu :</span> {{ location }}
+      </div>
+    {% endif %}
+  </header>
+
+  {% if image %}
+    <div class="mb-8">
+      <img src="{{ image }}" alt="{{ title }}" class="w-full h-64 object-cover rounded-lg shadow-lg">
+    </div>
+  {% endif %}
+
+  <div class="content prose dark:prose-invert max-w-none">
+    {{ content | safe }}
+  </div>
+
+  {% if tickets_url %}
+    <div class="mt-8">
+      <a href="{{ tickets_url }}" 
+         class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+         target="_blank" 
+         rel="noopener noreferrer">
+        Réserver des billets
+      </a>
+    </div>
+  {% endif %}
+</article>
