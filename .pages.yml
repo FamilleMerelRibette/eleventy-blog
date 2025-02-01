@@ -27,6 +27,7 @@ content:
         label: Navigation
         type: object
         fields:
+          - { name: parent, label: Menu, type: string, hidden: true, default: "Nos Spectacles" }
           - { name: key, label: Page, type: string }
           - { name: order, label: Order, type: number }
       - { name: date, label: Date, type: date }
