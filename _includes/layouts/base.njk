@@ -36,17 +36,48 @@
 	<body>
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
-		<header>
-			<a href="/" class="home-link">{{ metadata.title }}</a>
+		<header class="bg-white shadow-lg">
+			<nav class="container mx-auto px-4">
+				<div class="flex justify-between items-center h-16">
+					<a href="/" class="text-xl font-bold text-gray-800">{{ metadata.title }}</a>
+					
+					<!-- Mobile menu button -->
+					<div class="md:hidden">
+						<button type="button" id="mobile-menu-button" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+							<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+							</svg>
+						</button>
+					</div>
 
-			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-			<nav>
-				<h2 class="visually-hidden">Top level navigation menu</h2>
-				<ul class="nav">
-				{%- for entry in collections.all | eleventyNavigation %}
-					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-				{%- endfor %}
-				</ul>
+					<!-- Desktop menu -->
+					<div class="hidden md:flex md:items-center">
+						<ul class="flex space-x-4">
+						{%- for entry in collections.all | eleventyNavigation %}
+							<li>
+								<a href="{{ entry.url }}" 
+									class="px-3 py-2 rounded-md text-sm font-medium {% if entry.url == page.url %}bg-gray-900 text-white{% else %}text-gray-600 hover:bg-gray-700 hover:text-white{% endif %}"
+									{% if entry.url == page.url %}aria-current="page"{% endif %}>
+									{{ entry.title }}
+								</a>
+							</li>
+						{%- endfor %}
+						</ul>
+					</div>
+				</div>
+
+				<!-- Mobile menu -->
+				<div id="mobile-menu" class="hidden md:hidden">
+					<div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+					{%- for entry in collections.all | eleventyNavigation %}
+						<a href="{{ entry.url }}" 
+							class="block px-3 py-2 rounded-md text-base font-medium {% if entry.url == page.url %}bg-gray-900 text-white{% else %}text-gray-600 hover:bg-gray-700 hover:text-white{% endif %}"
+							{% if entry.url == page.url %}aria-current="page"{% endif %}>
+							{{ entry.title }}
+						</a>
+					{%- endfor %}
+					</div>
+				</div>
 			</nav>
 		</header>
 
@@ -60,5 +91,14 @@
 		<footer></footer>
 
 		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
+		<script>
+			const mobileMenuButton = document.getElementById('mobile-menu-button');
+			const mobileMenu = document.getElementById('mobile-menu');
+
+			mobileMenuButton.addEventListener('click', () => {
+				const isHidden = mobileMenu.classList.contains('hidden');
+				mobileMenu.classList.toggle('hidden', !isHidden);
+			});
+		</script>
 	</body>
 </html>
