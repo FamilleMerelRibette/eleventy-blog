@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="fr" class="scroll-smooth">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>wip</title>
+		<meta name="description" content="Sonia Ribette, Chanteuse, Musicienne, Comédienne.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="wip">
+		<link rel="alternate" href="/feed/feed.json" type="application/json" title="wip">
+		<style>.postlist { counter-reset: start-from 5 }
+/* Message Box */
+.message-box {
+	--color-message-box: #ffc;
+
+	display: block;
+	background-color: var(--color-message-box);
+	color: var(--color-gray-90);
+	padding: 1em 0.625em; /* 16px 10px /16 */
+}
+.message-box ol {
+	margin-top: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+	.message-box {
+		--color-message-box: #082840;
+	}
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .visually-hidden {
+    @apply sr-only;
+  }
+}
+
+@layer components {
+  .header-anchor {
+    @apply text-transparent hover:text-gray-400 no-underline hover:underline ml-1;
+  }
+  
+  .post-tag {
+    @apply inline-flex items-center justify-center capitalize italic;
+  }
+  
+  .postlist {
+    @apply list-none pl-6;
+  }
+  
+  .postlist-item {
+    @apply flex flex-wrap items-baseline mb-4;
+  }
+  
+  .postlist-date {
+    @apply text-sm text-gray-600;
+  }
+  
+  .postlist-link {
+    @apply text-lg font-bold basis-[calc(100%-1.5rem)] px-1 underline underline-offset-2;
+  }
+  
+  .post-metadata {
+    @apply inline-flex flex-wrap gap-2 list-none p-0 m-0;
+  }
+  
+  .post-metadata time {
+    @apply mr-4;
+  }
+}</style>
+	</head>
+	<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 antialiased">
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header class="bg-white dark:bg-gray-800 shadow-lg">
+			<nav class="container mx-auto px-4">
+
+			<ul><li><a href="/">Home</a></li>
+<li><a href="/blog/">Archive</a></li>
+<li><a href="/spectacles/">Nos spectacles</a><ul><li><a href="/spectacles/premier-spectacle/">premier spectacle</a></li></ul></li>
+<li><a href="/about/">A Propos</a></li></ul>
+
+			</nav>
+		</header>
+
+		<main id="skip" class="container mx-auto px-4 py-8 max-w-4xl [&>h1]:font-comic [&>h2]:font-comic [&>h3]:font-comic [&>h4]:font-comic [&>h5]:font-comic [&>h6]:font-comic">
+			<!-- Delete this message, it will also remove the component CSS from the bundle -->
+<div class="message-box">
+	<ol>
+		<li>Edit the <code>_data/metadata.js</code> with your blog’s information.</li>
+		<li>(Optional) Edit <code>eleventy.config.js</code> with your <a href="https://www.11ty.dev/docs/config/">configuration preferences</a>.</li>
+		<li>Delete this message from <code>_includes/layouts/home.njk</code>.</li>
+	</ol>
+	<p><em>This is an <a href="https://www.11ty.dev/">Eleventy project</a> created from the <a href="https://github.com/11ty/eleventy-base-blog"><code>eleventy-base-blog</code> repo</a>.</em></p>
+</div>
+<!-- Stop deleting -->
+
+
+
+<h1>Latest 3 Posts</h1>
+
+
+
+
+<ol reversed class="postlist">
+
+	<li class="postlist-item">
+		<a href="/blog/fourthpost/" class="postlist-link">This is my fourth post.</a>
+		<time class="postlist-date" datetime="2018-09-30">September 2018</time>
+	</li>
+
+	<li class="postlist-item">
+		<a href="/blog/thirdpost/" class="postlist-link">This is my third post.</a>
+		<time class="postlist-date" datetime="2018-08-24">August 2018</time>
+	</li>
+
+	<li class="postlist-item">
+		<a href="/blog/secondpost/" class="postlist-link">This is my second post with a much longer title.</a>
+		<time class="postlist-date" datetime="2018-07-04">July 2018</time>
+	</li>
+
+</ol>
+
+
+
+
+<p>1 more post can be found in <a href="/blog/">the archive</a>.</p>
+
+
+
+
+
+
+		</main>
+
+		<footer class="container mx-auto px-4 py-8 text-center text-gray-600 dark:text-gray-400">
+			<p class="text-sm">&copy; 2024</p>
+		</footer>
+
+		<!-- Current page: / -->
+	</body>
+</html>

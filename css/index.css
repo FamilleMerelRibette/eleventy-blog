@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .visually-hidden {
+    @apply sr-only;
+  }
+}
+
+@layer components {
+  .header-anchor {
+    @apply text-transparent hover:text-gray-400 no-underline hover:underline ml-1;
+  }
+  
+  .post-tag {
+    @apply inline-flex items-center justify-center capitalize italic;
+  }
+  
+  .postlist {
+    @apply list-none pl-6;
+  }
+  
+  .postlist-item {
+    @apply flex flex-wrap items-baseline mb-4;
+  }
+  
+  .postlist-date {
+    @apply text-sm text-gray-600;
+  }
+  
+  .postlist-link {
+    @apply text-lg font-bold basis-[calc(100%-1.5rem)] px-1 underline underline-offset-2;
+  }
+  
+  .post-metadata {
+    @apply inline-flex flex-wrap gap-2 list-none p-0 m-0;
+  }
+  
+  .post-metadata time {
+    @apply mr-4;
+  }
+}
