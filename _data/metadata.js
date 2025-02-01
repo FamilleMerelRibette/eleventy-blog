@@ -1,6 +1,6 @@
 module.exports = {
-	title: "Eleventy Base Blog v8",
-	url: "https://example.com/",
+	title: "wip",
+	url: "https://wip.a-bordeaux.com/",
 	language: "fr",
 	description: "Sonia Ribette, Chanteuse, Musicienne, Comédienne.",
 	author: {
