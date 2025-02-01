@@ -48,6 +48,11 @@ module.exports = function(eleventyConfig) {
 		return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
 	});
 
+	// Collection pour les spectacles
+	eleventyConfig.addCollection("spectacles", function(collectionApi) {
+		return collectionApi.getFilteredByGlob("content/spectacles/*.md");
+	});
+
 	// Get the first `n` elements of a collection.
 	eleventyConfig.addFilter("head", (array, n) => {
 		if(!Array.isArray(array) || array.length === 0) {
