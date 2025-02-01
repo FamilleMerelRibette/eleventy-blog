@@ -42,7 +42,7 @@
 					<!-- Logo et menu principal -->
 					<div class="flex justify-between items-center h-16">
 						<a href="/" class="text-xl font-bold text-gray-800">{{ metadata.title }}</a>
-						
+
 						<!-- Menu déroulant sur mobile -->
 						<div class="md:hidden">
 							<details class="relative">
@@ -53,7 +53,7 @@
 								</summary>
 								<div class="absolute right-0 w-48 py-2 mt-2 bg-white rounded-md shadow-xl z-20">
 									{%- for entry in collections.all | eleventyNavigation %}
-									<a href="{{ entry.url }}" 
+									<a href="{{ entry.url }}"
 										class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 {% if entry.url == page.url %}bg-gray-100{% endif %}"
 										{% if entry.url == page.url %}aria-current="page"{% endif %}>
 										{{ entry.title }}
@@ -66,7 +66,7 @@
 						<!-- Menu desktop -->
 						<div class="hidden md:flex md:items-center space-x-4">
 							{%- for entry in collections.all | eleventyNavigation %}
-							<a href="{{ entry.url }}" 
+							<a href="{{ entry.url }}"
 								class="px-3 py-2 rounded-md text-sm font-medium {% if entry.url == page.url %}bg-gray-900 text-white{% else %}text-gray-600 hover:bg-gray-700 hover:text-white{% endif %}"
 								{% if entry.url == page.url %}aria-current="page"{% endif %}>
 								{{ entry.title }}
@@ -77,9 +77,6 @@
 				</div>
 			</nav>
 		</header>
-
-		{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
-
 
 		<main id="skip">
 			{{ content | safe }}
